@@ -2,10 +2,10 @@
 
 import { v4 as uuidv4 } from 'uuid';
 import React, { useState, useEffect } from "react";
-import { Button } from "components/ui/button"; // Adjusted import path
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "components/ui/dialog";
-import { Input } from "components/ui/input";
-import { Textarea } from "components/ui/textarea";
+import { Button } from '../../components/ui/button';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "../../components/ui/dialog";
+import { Input } from "../../components/ui/input";
+import { Textarea } from "../../components/ui/textarea";
 import { chatSession } from "@/utils/GeminiAiModel";
 import { LoaderCircle, PlusCircle } from "lucide-react";
 import { MockInterview } from "@/utils/schema";

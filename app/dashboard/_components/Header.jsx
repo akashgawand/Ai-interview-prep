@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { UserButton } from '@clerk/nextjs';
 import { usePathname } from 'next/navigation';
-
+import Link from "next/link";
 const Header = () => {
 
   const path=usePathname()
@@ -21,21 +21,26 @@ const Header = () => {
       />
       <ul className='hidden md:flex gap-5'>
 
-        <li className={`hover:text-purple-600  font-semibold  text-xl transition-all cursor-pointer
-         ${path==='/interview' && 'text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-purple-600'} `}>Interview </li>
-        
+        <Link href={'/dashboard'}>
         <li className={` hover:text-purple-600 font-semibold  text-xl transition-all cursor-pointer
           ${path==='/dashboard' && 'text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-purple-600'} `}>Dashboard </li>
        
-        <li className={` hover:text-purple-600 font-semibold  text-xl transition-all cursor-pointer
-          ${path==='/questions' && 'text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-purple-600'} `}>Questions </li>
-       
-        <li className={` hover:text-purple-600 font-semibold  text-xl transition-all cursor-pointer
+        </Link>
+       <Link href="/dashboard/history">
+          <li className={`hover:text-purple-600 font-semibold text-xl transition-all cursor-pointer
+            ${path === '/questions' && 'text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-purple-600'}`}>
+            History
+          </li>
+        </Link>
+        {/* <li className={` hover:text-purple-600 font-semibold  text-xl transition-all cursor-pointer
           ${path==='/upgrade' && 'text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-purple-600'} `}>Upgrade </li>
-       
-        <li className={` hover:text-purple-600 font-semibold  text-xl transition-all cursor-pointer 
-          ${path==='/HowItWorks' && 'text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-purple-600'}`}>How it works? </li>
-        
+        */}
+        <Link href="/dashboard/howItWorks">
+          <li className={`hover:text-purple-600 font-semibold text-xl transition-all cursor-pointer
+            ${path === '/howItWorks' && 'text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-purple-600'}`}>
+            How it works?
+          </li>
+        </Link>
       </ul>
       <UserButton />
     </div>

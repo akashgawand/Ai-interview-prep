@@ -3,6 +3,7 @@
 import React from 'react'
 import Header from './_components/Header'
 import AddNewInterview from './_components/AddNewInterview'
+import InterviewLists from './_components/interviewList'
 
 const Dashboard = () => {
   return (
@@ -18,6 +19,7 @@ const Dashboard = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 my-5'>
           <AddNewInterview />
         </div>
+      {/* <InterviewLists/> */}
       </div>
     </div>
   )
