@@ -7,7 +7,7 @@ import { eq } from 'drizzle-orm';
 import { Loader2 } from 'lucide-react';
 import QuestionSection from './_components/questionSection';
 import RecordAnswerSection from './_components/RecordAnswerSection';
-import { Button } from '@/components/ui/button';
+import { Button } from '../../../../components/ui/button';
 import Link from 'next/link';
 
 const StartInterview = ({ params }) => {

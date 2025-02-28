@@ -6,7 +6,7 @@ import { MockInterview } from '@/utils/schema';
 import { eq } from "drizzle-orm";
 import { WebcamIcon, Loader2 } from "lucide-react";
 import Webcam from "react-webcam";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../../components/ui/button";
 import { chatSession } from "@/utils/GeminiAiModel";
 import Link from 'next/link';
 

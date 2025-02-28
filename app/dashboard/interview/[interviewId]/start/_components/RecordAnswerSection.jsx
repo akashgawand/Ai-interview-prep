@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Webcam from 'react-webcam';
-import { Button } from '@/components/ui/button';
+import { Button } from '../../../../../components/ui/button';
 import useSpeechToText from 'react-hook-speech-to-text';
 import { toast } from 'sonner';
 import { chatSession } from '@/utils/GeminiAiModel';
